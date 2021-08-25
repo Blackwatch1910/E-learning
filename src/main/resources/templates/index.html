@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html xmlns:th="http:www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Dev-Learning</title>
+<link rel="stylesheet" type="text/css" href="/webjars/bootstrap/css/bootstrap.min.css">
+<style type="text/css">
+	body {
+		margin: 0;
+		background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+		background-size: 400% 400%;
+		animation: gradient 15s ease infinite;
+	}
+
+	@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+a {
+	color: #fff;
+}
+
+img {
+	border-right: 2px solid black;
+	padding: 20px;
+}
+
+.waviy {
+  position: relative;
+  -webkit-box-reflect: below -20px linear-gradient(transparent, rgba(0,0,0,.2));
+  font-size: 60px;
+}
+.waviy span {
+  font-family: 'Alfa Slab One', cursive;
+  position: relative;
+  display: inline-block;
+  color: #fff;
+  text-transform: uppercase;
+  animation: waviy 1s infinite;
+  animation-delay: calc(.1s * var(--i));
+  
+}
+@keyframes waviy {
+  0%,40%,100% {
+    transform: translateY(0)
+  }
+  20% {
+    transform: translateY(-20px)
+  }
+}
+</style>
+</head>
+<body>
+	<div class="container text-center" style="margin-top:5%">
+		<div class="waviy">
+   			<span style="--i:1">D</span>
+		   <span style="--i:2">E</span>
+		   <span style="--i:3">V</span>
+		   <span style="--i:4">-</span>
+		   <span style="--i:5">L</span>
+		   <span style="--i:6">E</span>
+		   <span style="--i:7">A</span>
+		   <span style="--i:8">R</span>
+		   <span style="--i:9">N</span>
+		   <span style="--i:10">!</span>
+  		</div>
+		<br />
+		<br />
+		<div class="d-flex justify-content-center">
+			<div>
+				<img src="https://image.freepik.com/free-vector/cartoon-working-day-scene-illustration_52683-62607.jpg" alt="background" />
+			</div>
+			<div>
+				<div>
+					<h3><a th:href="@{/list_users}">List Users</a></h3>
+					<h3><a th:href="@{/register}">Register</a></h3>
+				</div>
+				<br />
+				<br />
+				<br />
+				<div>
+					<h3>Already a User? Login here</h3>
+					<h3><a th:href="@{/login}">Login</a></h3>
+				</div>
+				<br />
+				<div>
+					<h3>Click here to register your course with us</h3>
+					<h3><a th:href="@{/register_course}">Register Course</a></h3>
+					
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

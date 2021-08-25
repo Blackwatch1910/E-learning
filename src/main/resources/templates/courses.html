@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html xmlns:th="http:www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Dev-Learning</title>
+<link rel="stylesheet" type="text/css" href="/webjars/bootstrap/css/bootstrap.min.css">
+</head>
+<body>
+	<div class="container text-center">
+		<div>
+			<h1>All available courses</h1>			
+		</div>
+		<div>
+			<table class="table table-stripped table-bordered">
+				<thead class="thead-dark">
+					<tr>
+						<th>Course ID</th>
+						<th>Name</th>
+						<th>Description</th>
+						<th>Fees</th>
+						<th>Resources</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr th:each="course: ${listCourses}">
+						<td th:text="${course.id}">Course ID</td>
+						<td th:text="${course.name}">Name</td>
+						<td th:text="${course.description}">Description</td>
+						<td th:text="${course.fees}">Fees</td>
+						<td th:text="${course.resource}">Resources</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<a th:href="@{/}">Home</a>
+	</div>
+</body>
+</html>

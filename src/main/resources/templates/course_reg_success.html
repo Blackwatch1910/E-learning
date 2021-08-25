@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns:th="http:www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Registration Success - Dev-Learning</title>
+<link rel="stylesheet" type="text/css" href="/webjars/bootstrap/css/bootstrap.min.css">
+</head>
+<body>
+	<div class="container text-center">
+		<div class="bg-success">
+			<h3>You have successfully registered a course with us.</h3>			
+		</div>
+		<div>
+			<h3>Click here to <a th:href="@{/view_courses}">Display</a> all of them!</h3>
+		</div>
+		<div>
+			<a th:href="@{/}">Home</a>
+		</div>
+	</div>
+</body>
+</html>
